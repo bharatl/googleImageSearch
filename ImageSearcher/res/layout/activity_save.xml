@@ -1,0 +1,120 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.bharatl.imagesearcher.SaveActivity" >
+    
+    <LinearLayout
+        android:id="@+id/spinner1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" 
+        android:layout_below="@+id/textView1"
+        android:orientation="horizontal">
+        
+        
+        <TextView
+        android:id="@+id/tvImgSize"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Image Size" />
+        
+         <Spinner
+        android:id="@+id/spImageSize"
+        android:layout_width="0dp"
+        android:entries="@array/image_size"
+        android:layout_height="wrap_content"
+        android:layout_weight="1" />    
+        </LinearLayout>
+        
+    
+    <LinearLayout
+        android:id="@+id/spinner2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" 
+        android:layout_below="@+id/spinner1"
+        android:orientation="horizontal">
+        
+        
+        <TextView
+        android:id="@+id/tvColorFilter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Color Filter" />
+        
+         <Spinner
+        android:id="@+id/spColorFilter"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:entries="@array/color_type"
+        android:layout_weight="1" />    
+        </LinearLayout>
+        
+    
+     <LinearLayout
+        android:id="@+id/spinner3"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" 
+        android:layout_below="@+id/spinner2"
+        android:orientation="horizontal">
+        
+        
+        <TextView
+        android:id="@+id/tvImgType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Image Type" />
+        
+         <Spinner
+        android:id="@+id/spImgType"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:entries="@array/img_type"
+        android:layout_weight="1" />    
+        </LinearLayout>
+        
+     <LinearLayout
+        android:id="@+id/spinner4"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" 
+        android:layout_below="@+id/spinner3"
+        android:orientation="horizontal">
+        
+         <TextView
+        android:id="@+id/tvSiteFilter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Site Filter" />
+        
+        <EditText
+        android:id="@+id/etSiteFilter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="yahoo.com" />
+          
+        </LinearLayout>
+
+     <Button
+         android:id="@+id/btnSave"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_below="@+id/spinner4"
+         android:layout_centerHorizontal="true"
+         android:onClick="savePreferences"
+         android:layout_marginTop="45dp"
+         android:text="@string/save" />
+
+     <TextView
+         android:id="@+id/textView1"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_alignLeft="@+id/spinner1"
+         android:layout_alignParentTop="true"
+         android:layout_marginTop="22dp"
+         android:text="Advanced Search Options"
+         android:textStyle="bold" />
+   
+</RelativeLayout>
